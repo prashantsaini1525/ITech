@@ -298,7 +298,7 @@
 		<div class="csec"></div>
 		<div class="back-contact">
 			<div class="cc">
-				<form action="mailto:roshank9419@gmail.com" method="post" enctype="text/plain">
+				<form name= "submit-to-google-sheet">
 				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
 				<center>
 				<input type="text" name="fname" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
@@ -311,6 +311,7 @@
 				<textarea name="message" required="required"></textarea><br>
 				<button type="submit" id="csubmit">Send Message</button>
 				</form>
+				<span id= "msg"></span>
 			</div>
 		</div>
 	</div>
@@ -373,7 +374,30 @@
 		</div>
 	</footer>
 
+<!----Google form-->
+<form name="submit-to-google-sheet">
+	<input name="email" type="email" placeholder="Email" required>
+	<button type="submit">Send</button>
+</form>
 
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbx8SZDBQ9l4W1ZYctQkVWhBgiNxcLTtkO7uK_0LedqtLcVZmbzahJWE-xa4zb-npMq65g/exec'
+	const form = document.forms['submit-to-google-sheet']
+	const msg = document.getElementById('msg') 
+
+	form.addEventListener('submit', e => {
+	e.preventDefault()
+	fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		.then(response => {
+			msg.innerHTML = "Thank you for Contact us!"
+			setTimeout(function(){
+				msg.innerHTML = ""
+			},5000)
+			form.reset()
+		})
+		.catch(error => console.error('Error!', error.message))
+	})
+</script>
 
 <!--CHATBOT SCRIPT-->
 			<script>
