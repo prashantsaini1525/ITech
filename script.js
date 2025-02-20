@@ -146,13 +146,13 @@ function display(n) {
   } 
 }
 
-function sideMenu(side) {
-  var menu = document.getElementById('side-menu');
-  if(side==0) {
-    menu.style = 'transform: translateX(0vh); position:fixed;';
+function sideMenu(toggle) {
+  const menu = document.getElementById('side-menu');
+  if (toggle === 0) {
+    menu.style.transform = 'translateX(0)';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  } else {
+    menu.style.transform = 'translateX(-100%)';
+    document.body.style.overflow = 'auto'; // Restore scrolling
   }
-  else {
-    menu.style = 'transform: translateX(-100%);';
-  }
-  side++;
-  }
+}
