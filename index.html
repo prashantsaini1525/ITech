@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
 	<meta charset="utf-8">
@@ -7,28 +8,31 @@
 	<title>I Tech World</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<script type="text/javascript" src="./script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="https://kit.fontawesome.com/e4acf8f52e.js" crossorigin="anonymous"></script>
 
 	<script>
-		$(window).on('scroll', function(){
-			if($(window).scrollTop()){
+		$(window).on('scroll', function () {
+			if ($(window).scrollTop()) {
 				$('nav').addClass('black');
-			}else {
+			} else {
 				$('nav').removeClass('black');
 			}
 		})
 	</script>
 </head>
+
 <body>
-<!-- Navigation Bar -->
+	<!-- Navigation Bar -->
 	<header id="header">
 		<nav>
 			<div id="logo">
-				<a href="#"><img src="" style="width: 120px;">I TECH WORLD</a></div>
+				<a href="#">I TECH WORLD</a>
+			</div>
 			<ul>
 				<li><a href="#" class="active">Home</a></li>
 				<li><a href="#courses_section">Courses</a></li>
@@ -38,25 +42,26 @@
 				<li><a href="#services_section">Services</a></li>
 				<li><a href="#contactus_section">Contact</a></li>
 			</ul>
-			
-			<!--<div class="srch">
-				<input type="text" class="search" id="searchInput" placeholder="Search here...">
-				<img src="images/icon/search.png" alt="search" onclick=searchCourses()>
-			</div>-->
-			
-			<div id="searchResults"></div>
-
+			<!-- Auth container to display Login/Sign Up or User Icon -->
+			<div id="auth-container">
+				<a href="login.html" class="auth-btn">Login</a>
+				<a href="signup.html" class="auth-btn">Sign Up</a>
 			</div>
-			<a class="get-started" href="./Login.html" target="_blank">Get Started</a>
+			<div id="user-container"></div>
 			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
 		</nav>
+
 
 		<div class="head-container">
 			<div class="quote">
 				<p>The beautiful thing about learning is that nobody can take it away from you</p>
-				<h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research!<br>For Free Education Click on Watch Now Below !</h5>
+				<h5>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,
+					beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and
+					directed research!<br>For Free Education Click on Watch Now Below !</h5>
 				<div class="play">
-				<img src="images/icon/play.png" alt="play"><span><a href="https://youtube.com/@itechworldxrt?si=k9xn3yAjoXG_DgDM" target="_blank">Watch Now</a></span>
+					<img src="images/icon/play.png" alt="play"><span><a
+							href="https://youtube.com/@itechworldxrt?si=k9xn3yAjoXG_DgDM" target="_blank">Watch
+							Now</a></span>
 				</div>
 			</div>
 			<div class="svg-image">
@@ -81,245 +86,362 @@
 		</div>
 	</header>
 
-<!-- Our Popular Courses -->
+	<!-- Our Popular Courses -->
 	<div class="diffSection" id="courses_section">
-		<center><p style="font-size: 50px; padding: 100px">Popular Courses We Offered for AKTU Students</p></center>
+		<center>
+			<p style="font-size: 50px; padding: 100px">Popular Courses We Offered for AKTU Students</p>
+		</center>
 	</div>
 	<br><br>
 	<div class="course">
-		<center><div class="cbox">
-		<div class="det"><a href="subjects/ourcourses.html#cyber"><img src="images/courses/book.png">Cyber Security</a></div>
-		<div class="det"><a href="subjects/ourcourses.html#engg"><img src="images/courses/d1.png">ES&E</a></div>
-		<div class="det"><a href="subjects/ourcourses.html#tc"><img src="images/courses/paper.png">TC</a></div>
-		<div class="det"><a href="subjects/ourcourses.html#uhv"><img src="images/courses/d1.png">UHV</a></div>
-	</div>
+		<center>
+			<div class="cbox">
+				<div class="det"><a href="subjects/ourcourses.html#cyber"><img src="images/courses/book.png">Cyber
+						Security</a></div>
+				<div class="det"><a href="subjects/ourcourses.html#engg"><img src="images/courses/d1.png">ES&E</a></div>
+				<div class="det"><a href="subjects/ourcourses.html#tc"><img src="images/courses/paper.png">TC</a></div>
+				<div class="det"><a href="subjects/ourcourses.html#uhv"><img src="images/courses/d1.png">UHV</a></div>
+			</div>
 		</center>
 		<div class="cbox">
-		<div class="det"><a href="subjects/ourcourses.html#toa"><img src="images/courses/algo.png">Theory of Automata</a></div>
-		<div class="det"><a href="subjects/ourcourses.html#aktu_papers"><img src="images/courses/data.png">AKTU PYQ</a></div>
-		<div class="det"><a href="subjects/ourcourses.html#aktu_notes"><img src="images/courses/pyq.png">AKTU NOTES</a></div>
-		<div class="det det-last"><a href="subjects/ourcourses.html#aktu_library"><img src="images/courses/book.png">ABESIT Library</a></div>
+			<div class="det"><a href="subjects/ourcourses.html#toa"><img src="images/courses/algo.png">Theory of
+					Automata</a></div>
+			<div class="det"><a href="subjects/ourcourses.html#aktu_papers"><img src="images/courses/data.png">AKTU
+					PYQ</a></div>
+			<div class="det"><a href="subjects/ourcourses.html#aktu_notes"><img src="images/courses/pyq.png">AKTU
+					NOTES</a></div>
+			<div class="det det-last"><a href="subjects/ourcourses.html#aktu_library"><img
+						src="images/courses/book.png">ABESIT Library</a></div>
 		</div>
 	</div>
 
 
-<!-- Some Popular Subjects -->
-		<div class="diffSection" id="courses_section">
-			<center><p style="font-size: 50px; padding: 100px">Popular Courses We Suggest</p></center>
+	<!-- Some Popular Subjects -->
+	<div class="diffSection" id="courses_section">
+		<center>
+			<p style="font-size: 50px; padding: 100px">Popular Courses We Suggest</p>
+		</center>
 	</div>
 	<br><br>
 	<div class="course">
-		<center><div class="cbox">
-		<div class="det"><a href="subjects/jee.html"><img src="images/courses/book.png">JEE Preparation</a></div>
-		<div class="det"><a href="subjects/gate.html"><img src="images/courses/d1.png">GATE Preparation</a></div>
-		<div class="det"><a href="subjects/jee.html#sample_papers"><img src="images/courses/paper.png">Sample Papers</a></div>
-		<div class="det"><a href="subjects/quiz.html"><img src="images/courses/d1.png">Daily Quiz</a></div>
-	</div>
+		<center>
+			<div class="cbox">
+				<div class="det"><a href="subjects/jee.html"><img src="images/courses/book.png">JEE Preparation</a>
+				</div>
+				<div class="det"><a href="subjects/gate.html"><img src="images/courses/d1.png">GATE Preparation</a>
+				</div>
+				<div class="det"><a href="subjects/jee.html#sample_papers"><img src="images/courses/paper.png">Sample
+						Papers</a></div>
+				<div class="det"><a href="subjects/quiz.html"><img src="images/courses/d1.png">Daily Quiz</a></div>
+			</div>
 		</center>
 		<div class="cbox">
-		<div class="det"><a href="subjects/computer_courses.html"><img src="images/courses/computer.png">Computer Courses</a></div>
-		<div class="det"><a href="subjects/computer_courses.html#data"><img src="images/courses/data.png">Data Structures</a></div>
-		<div class="det"><a href="subjects/computer_courses.html#algo"><img src="images/courses/algo.png">Algorithm</a></div>
-		<div class="det det-last"><a href="subjects/computer_courses.html#projects"><img src="images/courses/projects.png">Projects</a></div>
+			<div class="det"><a href="subjects/computer_courses.html"><img src="images/courses/computer.png">Computer
+					Courses</a></div>
+			<div class="det"><a href="subjects/computer_courses.html#data"><img src="images/courses/data.png">Data
+					Structures</a></div>
+			<div class="det"><a href="subjects/computer_courses.html#algo"><img
+						src="images/courses/algo.png">Algorithm</a></div>
+			<div class="det det-last"><a href="subjects/computer_courses.html#projects"><img
+						src="images/courses/projects.png">Projects</a></div>
 		</div>
 	</div>
 
-	
-<!-- ABOUT -->
+
+	<!-- ABOUT -->
 	<div class="diffSection" id="about_section">
-		<center><p style="font-size: 50px; padding: 100px">About</p></center>
+		<center>
+			<p style="font-size: 50px; padding: 100px">About</p>
+		</center>
 		<div class="about-content">
-				<div class="side-image">
-					<img class="sideImage" src="images/extra/e3.jpg">
-				</div>
-				<div class="side-text">
-					<h2>What you think about us ?</h2>
-					<p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and directed research.<br> Educational website can include websites that have games, videos or topic related resources that act as tools to enhance learning and supplement classroom teaching. These websites help make the process of learning entertaining and attractive to the student, especially in today's age. <br>Using HTML(HyperText Markup Language), CSS(Cascading Style Sheet), JavaScript, we can make learning more easier and in a interesting way.</p>
-				</div>
+			<div class="side-image">
+				<img class="sideImage" src="images/extra/e3.jpg">
+			</div>
+			<div class="side-text">
+				<h2>What you think about us ?</h2>
+				<p>Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,
+					beliefs, and habits. Educational methods include teaching, training, storytelling, discussion and
+					directed research.<br> Educational website can include websites that have games, videos or topic
+					related resources that act as tools to enhance learning and supplement classroom teaching. These
+					websites help make the process of learning entertaining and attractive to the student, especially in
+					today's age. <br>Using HTML(HyperText Markup Language), CSS(Cascading Style Sheet), JavaScript, we
+					can make learning more easier and in a interesting way.</p>
+			</div>
 		</div>
 	</div>
 
 
-<!-- PORTFOLIO -->
+	<!-- PORTFOLIO -->
 	<div class="diffSection" id="portfolio_section">
-		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Portfolio</p></center>
+		<center>
+			<p style="font-size: 50px; padding: 100px; padding-bottom: 40px;">Portfolio</p>
+		</center>
 		<div class="content">
 			<p>
-				“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”
+				“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your
+				attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try
+				ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”
 			</p>
 		</div>
 	</div>
 	<div class="extra">
 		<p>We're increasing this data every year</p>
 		<div class="smbox">
-		<span><center><div class="data">154</div><div class="det">Enrolled Students</div></center></span>
-		<span><center><div class="data">62</div><div class="det">Total Courses</div></center></span>
-		<span><center><div class="data">56</div><div class="det">Placed Students</div></center></span>
-		<span><center><div class="data">27</div><div class="det">Total Projects</div></center></span>
-		</div>
-	</div>
-
-<!-- Founder -->
-<div class="diffSection" id="founder_section">
-	<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">Founder of I Tech World</p></center>
-	<div class="foundercard">
-		<div class="card">
-			<center><img src="images/creator/RitikSingh.jpg"></center>
-			<center><div class="card-title">Ritik Singh</div>
-			<div id="detail">
-				<p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives “</p>
-				<div class="duty"></div>
-				<a href="https://www.linkedin.com/in/ritik-singh-8a3999202" target="_blank"><button class="btn-ritik">Follow +</button></a>
-			</div>
-			</center>
-		</div>
-	</div>
-</div>
-
-
-<!-- TEAM -->
-	<div class="diffSection" id="#founder_section">
-		<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;">We're the Creators</p></center>
-		<div class="totalcard">
-			<div class="card">
-				<center><img src="images/creator/Mohit Shrivastava.jpg"></center>
-				<center><div class="card-title">Mohit Shrivastava</div>
-				<div id="detail">
-					<p>“I find that the harder I work, the more luck I seem to have. -Mohit ”</p>
-					<div class="duty"></div>
-					<a href="https://www.linkedin.com/in/mohit-shrivastav-706676267/" target="_blank"><button class="btn-mohit">Follow +</button></a>
-				</div>
+			<span>
+				<center>
+					<div class="data">154</div>
+					<div class="det">Enrolled Students</div>
 				</center>
-			</div>
-			<div class="card">
-				<center><img src="images/creator/Prashant Saini.jpeg"></center>
-				<center><div class="card-title">Prashant Saini</div>
-				<div id="detail">
-					<p>“ There is no end to education. It is not that you read a book, pass an examination, and finish with education.”</p>
-					<div class="duty"></div>
-					<a href="https://www.linkedin.com/in/prashant-saini-5398341b3/" target="_blank"><button class="btn-Prashant">Follow +</button></a>
-					</div>
-				</div>
-				<div class="card">
-					<center><img src="images/creator/Ritik Kumar 2.jpg"></center>
-					<center><div class="card-title">Ritik Kumar</div>
-					<div id="detail">
-						<p>“One learns from books and example only that certain things can be done. Actual learning requires that you do those things.”</p>
-						<div class="duty"></div>
-						<a href="https://www.linkedin.com/in/ritik-kumar-2b707b224/" target="_blank"><button class="btn-ritikkumar">Follow +</button></a>
-						</div>
-					</div>
-			</div>
+			</span>
+			<span>
+				<center>
+					<div class="data">62</div>
+					<div class="det">Total Courses</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data">56</div>
+					<div class="det">Placed Students</div>
+				</center>
+			</span>
+			<span>
+				<center>
+					<div class="data">27</div>
+					<div class="det">Total Projects</div>
+				</center>
+			</span>
 		</div>
 	</div>
 
+	<!-- Founder -->
+	<section id="founder_section">
+		<h1>Founder of I Tech World</h1>
+		<div class="card-container">
+			<div class="card">
+				<img src="images/creator/RitikSingh.jpg" alt="Ritik Singh">
+				<div class="card-title">Ritik Singh</div>
+				<div class="detail">
+					<p>“You can teach a student a lesson for a day; but if you can teach him to learn by creating
+						curiosity, he will continue the learning process as long as he lives.”</p>
+					<a href="https://www.linkedin.com/in/ritik-singh-8a3999202" target="_blank">
+						<button class="btn-ritik">Follow +</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
-<!-- SERVICES -->
+
+
+	<!-- TEAM -->
+	<section id="team_section">
+		<h1>We're the Creators</h1>
+		<div class="card-container team-section">
+			<div class="card">
+				<img src="images/creator/Mohit%20Shrivastava.jpg" alt="Mohit Shrivastava">
+				<div class="card-title">Mohit Shrivastava</div>
+				<div class="detail">
+					<p>“I find that the harder I work, the more luck I seem to have. -Mohit”</p>
+					<a href="https://www.linkedin.com/in/mohit-shrivastav-706676267/" target="_blank">
+						<button class="btn-mohit">Follow +</button>
+					</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/creator/Prashant%20Saini.jpeg" alt="Prashant Saini">
+				<div class="card-title">Prashant Saini</div>
+				<div class="detail">
+					<p>“There is no end to education. It is not that you read a book, pass an examination, and finish
+						with education.”</p>
+					<a href="https://www.linkedin.com/in/prashant-saini-5398341b3/" target="_blank">
+						<button class="btn-Prashant">Follow +</button>
+					</a>
+				</div>
+			</div>
+			<div class="card">
+				<img src="images/creator/Ritik%20Kumar%202.jpg" alt="Ritik Kumar">
+				<div class="card-title">Ritik Kumar</div>
+				<div class="detail">
+					<p>“One learns from books and example only that certain things can be done. Actual learning requires
+						that you do those things.”</p>
+					<a href="https://www.linkedin.com/in/ritik-kumar-2b707b224/" target="_blank">
+						<button class="btn-ritikkumar">Follow +</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- SERVICES -->
 	<div class="service-swipe">
 		<div class="diffSection" id="services_section">
-		<center><p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p></center>
+			<center>
+				<p style="font-size: 50px; padding: 100px; padding-bottom: 40px; color: #fff;">Services</p>
+			</center>
 		</div>
-		<a href="subjects/computer_courses.html"><div class="s-card"><img src="images/icon/computer-courses.png"><p>Free Online Computer Courses</p></div></a>
-		<a href="subjects/jee.html"><div class="s-card"><img src="images/icon/brainbooster.png"><p>Building Concepts for Competitive Exams</p></div></a>
-		<a href="#"><div class="s-card"><img src="images/icon/online-tutorials.png"><p>Online Video Lectures</p></div></a>
-		<a href="subjects/jee.html#sample_papers"><div class="s-card"><img src="images/icon/papers.jpg"><p>Sample Papers of Various Competitive Exams</p></div></a>
-		<a href="#"><div class="s-card"><img src="images/icon/p3.png"><p>Performance and Ranking Report</p></div></a>
-		<a href="#contactus_section"><div class="s-card"><img src="images/icon/discussion.png"><p>Discussion with Our Tutors & Mentors</p></div></a>
-		<a href="subjects/quiz.html"><div class="s-card"><img src="images/icon/q1.png"><p>Daily Brain Teasing Questions to Improve IQ</p></div></a>
-		<a href="#contactus_section"><div class="s-card"><img src="images/icon/help.png"><p>24x7 Online Support</p></div></a>
+		<a href="subjects/computer_courses.html">
+			<div class="s-card"><img src="images/icon/computer-courses.png">
+				<p>Free Online Computer Courses</p>
+			</div>
+		</a>
+		<a href="subjects/jee.html">
+			<div class="s-card"><img src="images/icon/brainbooster.png">
+				<p>Building Concepts for Competitive Exams</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="s-card"><img src="images/icon/online-tutorials.png">
+				<p>Online Video Lectures</p>
+			</div>
+		</a>
+		<a href="subjects/jee.html#sample_papers">
+			<div class="s-card"><img src="images/icon/papers.jpg">
+				<p>Sample Papers of Various Competitive Exams</p>
+			</div>
+		</a>
+		<a href="#">
+			<div class="s-card"><img src="images/icon/p3.png">
+				<p>Performance and Ranking Report</p>
+			</div>
+		</a>
+		<a href="#contactus_section">
+			<div class="s-card"><img src="images/icon/discussion.png">
+				<p>Discussion with Our Tutors & Mentors</p>
+			</div>
+		</a>
+		<a href="subjects/quiz.html">
+			<div class="s-card"><img src="images/icon/q1.png">
+				<p>Daily Brain Teasing Questions to Improve IQ</p>
+			</div>
+		</a>
+		<a href="#contactus_section">
+			<div class="s-card"><img src="images/icon/help.png">
+				<p>24x7 Online Support</p>
+			</div>
+		</a>
 	</div>
 
-<!-- Reviews by Students -->
-<div id="makeitfull">
-	<a href="#review_section"><img src="images/icon/makeitfull.png"></a>
-</div>
-<div class="review">
-	<div class="diffSection" id="review_section">
-		<center><p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What the Students Say About Us?</p></center>
+	<!-- Reviews by Students -->
+	<div id="makeitfull">
+		<a href="#review_section"><img src="images/icon/makeitfull.png"></a>
 	</div>
-	<div class="rev-container">
-		<div class="rev-card">
-			<div class="identity">
-				<img src="images/creator/Ritik Kumar 2.jpg"><p>Ritik Kumar</p>
-				<h6>Java</h6>
-				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
-			</div>
-			<div class="rev-cont">
-				<p id="title">Review:</p>
-				<p id="content">
-					This course was very informative and efficient. I had a great experience and learned a lot. The instructor was a great resource and an amazing teacher.
-					Higly Recommend!
-				</p>
-			</div>
+	<div class="review">
+		<div class="diffSection" id="review_section">
+			<center>
+				<p style="font-size: 40px; padding: 100px; padding-bottom: 40px; color: #2E3D49;">What the Students Say
+					About Us?</p>
+			</center>
 		</div>
-		<div class="rev-card">
-			<div class="identity">
-				<img src="images/creator/Mohit 2.jpg"><p>Mohit Shrivastava</p>
-				<h6>C/C++</h6>
-				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+		<div class="rev-container">
+			<div class="rev-card">
+				<div class="identity">
+					<img src="images/creator/Ritik Kumar 2.jpg">
+					<p>Ritik Kumar</p>
+					<h6>Java</h6>
+					<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						This course was very informative and efficient. I had a great experience and learned a lot. The
+						instructor was a great resource and an amazing teacher.
+						Higly Recommend!
+					</p>
+				</div>
 			</div>
-			<div class="rev-cont">
-				<p id="title">Review:</p>
-				<p id="content">
-					When I was watching "Dear Zindagi", I could relate Sharukh Khan to Code with Harry. The way Sharukh Khan was giving life lessons to Alia Bhatt, in the same way Arnav Bhaiya will give coding life lessons which will guide you throughout your code life...
-				</p>
+			<div class="rev-card">
+				<div class="identity">
+					<img src="images/creator/Mohit 2.jpg">
+					<p>Mohit Shrivastava</p>
+					<h6>C/C++</h6>
+					<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						When I was watching "Dear Zindagi", I could relate Sharukh Khan to Code with Harry. The way
+						Sharukh Khan was giving life lessons to Alia Bhatt, in the same way Arnav Bhaiya will give
+						coding life lessons which will guide you throughout your code life...
+					</p>
+				</div>
 			</div>
-		</div>
-		<div class="rev-card">
-			<div class="identity">
-				<img src="images/creator/Aryan Thakur.jpg"><p>Aryan Thakur</p>
-				<h6>JEE</h6>
-				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
+			<div class="rev-card">
+				<div class="identity">
+					<img src="images/creator/Aryan Thakur.jpg">
+					<p>Aryan Thakur</p>
+					<h6>JEE</h6>
+					<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						I enjoyed the course and learned a lot from it. The content is well organised and focused on
+						practical situations. I particularly enjoyed the bits of psychological research shared in the
+						content. This course was short but very informative and very helpful for an aspiring leader like
+						myself</p>
+				</div>
 			</div>
-			<div class="rev-cont">
-				<p id="title">Review:</p>
-				<p id="content">
-					I enjoyed the course and learned a lot from it. The content is well organised and focused on practical situations. I particularly enjoyed the bits of psychological research shared in the content. This course was short but very informative and very helpful for an aspiring leader like myself</p>
-			</div>
-		</div>
-		<div class="rev-card">
-			<div class="identity">
-				<img src="images/creator/Ashi.jpg"><p>Ashi Agarwal</p>
-				<h6>Python</h6>
-				<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png"></div>
-			</div>
-			<div class="rev-cont">
-				<p id="title">Review:</p>
-				<p id="content">
-					This was my first complete course at coding blocks. I attended the Python course in Winter 2020 and loved it which made me join the full course.  I would certainly recommend this to anyone...
-				</p>
+			<div class="rev-card">
+				<div class="identity">
+					<img src="images/creator/Ashi.jpg">
+					<p>Ashi Agarwal</p>
+					<h6>Python</h6>
+					<div class="rating"><img src="images/icon/star.png"><img src="images/icon/star.png"><img
+							src="images/icon/star.png"><img src="images/icon/star.png"><img src="images/icon/star.png">
+					</div>
+				</div>
+				<div class="rev-cont">
+					<p id="title">Review:</p>
+					<p id="content">
+						This was my first complete course at coding blocks. I attended the Python course in Winter 2020
+						and loved it which made me join the full course. I would certainly recommend this to anyone...
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<!-- CONTACT US -->
+	<!-- CONTACT US -->
 	<div class="diffSection" id="contactus_section">
-		<center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
+		<center>
+			<p style="font-size: 50px; padding: 100px">Contact Us</p>
+		</center>
 		<div class="csec"></div>
 		<div class="back-contact">
 			<div class="cc">
-				<form name= "submit-to-google-sheet">
-				<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br>
-				<center>
-				<input type="text" name="fname" style="margin-right: 10px; width: 175px" required="required"><input type="text" name="lname" style="width: 175px" required="required"><br>
-				</center>
-				<label>Email <span class="imp">*</span></label><br>
-				<input type="email" name="email" style="width: 100%" required="required"><br>
-				<label>Phone No. <span class="imp">*</span></label><br>
-				<input type="text" name="phone" style="width: 100%" required="required"><br>
-				<label>Message <span class="imp">*</span></label><br>
-				<textarea name="message" required="required"></textarea><br>
-				<button type="submit" id="csubmit">Send Message</button>
+				<form name="submit-to-google-sheet">
+					<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name
+						<span class="imp">*</span></label><br>
+					<center>
+						<input type="text" name="fname" style="margin-right: 10px; width: 175px"
+							required="required"><input type="text" name="lname" style="width: 175px"
+							required="required"><br>
+					</center>
+					<label>Email <span class="imp">*</span></label><br>
+					<input type="email" name="email" style="width: 100%" required="required"><br>
+					<label>Phone No. <span class="imp">*</span></label><br>
+					<input type="text" name="phone" style="width: 100%" required="required"><br>
+					<label>Message <span class="imp">*</span></label><br>
+					<textarea name="message" required="required"></textarea><br>
+					<button type="submit" id="csubmit">Send Message</button>
 				</form>
-				<span id= "msg"></span>
+				<span id="msg"></span>
 			</div>
 		</div>
 	</div>
 
 
 
-<!-- FEEDBACK -->
+	<!-- FEEDBACK -->
 	<div class="title2" id="feedBACK">
 		<span>Give Feedback</span>
 		<div class="shortdesc2">
@@ -342,10 +464,16 @@
 		</div>
 	</div>
 
-<!-- Sliding Information -->
-	<marquee style="background: linear-gradient(to right, #425973, #DF2771); margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20"><div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and change.”</div></marquee>
+	<!-- Sliding Information -->
+	<marquee style="background: linear-gradient(to right, #425973, #DF2771); margin-top: 50px;" direction="left"
+		onmouseover="this.stop()" onmouseout="this.start()" scrollamount="20">
+		<div class="marqu">“Education is the passport to the future, for tomorrow belongs to those who prepare for it
+			today.” “Your attitude, not your aptitude, will determine your altitude.” “If you think education is
+			expensive, try ignorance.” “The only person who is educated is the one who has learned how to learn …and
+			change.”</div>
+	</marquee>
 
-<!-- FOOTER -->
+	<!-- FOOTER -->
 	<footer>
 		<div class="footer-container">
 			<div class="left-col">
@@ -362,7 +490,7 @@
 				<p class="rights-text">Copyright © 2024 Created By I Tech World All Rights Reserved.</p>
 				<br>
 				<p><i class="fa-solid fa-location-dot"></i> ACET<br>Aligarh, U.P.-202001</p><br>
-				<p><i class="fa-solid fa-phone"></i>  +91-8650565472<br>
+				<p><i class="fa-solid fa-phone"></i> +91-8650565472<br>
 				<p><i class="fa-solid fa-envelope"></i> itechworldxrt@gmail.com</p>
 			</div>
 
@@ -378,38 +506,52 @@
 		</div>
 	</footer>
 
-<script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbx8SZDBQ9l4W1ZYctQkVWhBgiNxcLTtkO7uK_0LedqtLcVZmbzahJWE-xa4zb-npMq65g/exec'
-	const form = document.forms['submit-to-google-sheet']
-	const msg = document.getElementById('msg') 
+	<!-- Include Clerk's JS SDK -->
+	<script>
+		window.addEventListener('load', async function () {
+			await Clerk.load();
+			const authContainer = document.getElementById('auth-container');
+			const userContainer = document.getElementById('user-container');
 
-	form.addEventListener('submit', e => {
-	e.preventDefault()
-	fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-		.then(response => {
-			msg.innerHTML = "Thank you for Contact us!"
-			setTimeout(function(){
-				msg.innerHTML = ""
-			},5000)
-			form.reset()
-		})
-		.catch(error => console.error('Error!', error.message))
-	})
-</script>
-
-<!--CHATBOT SCRIPT-->
-<script>
-	window.embeddedChatbotConfig = {
-	chatbotId: "XuRClblpcZnzcX9uEP6HE",
-	domain: "www.chatbase.co"
-	}
+			// If the user is logged in, display the user icon
+			if (Clerk.user) {
+				// Clear the login/signup links
+				authContainer.style.display = 'none';
+				userContainer.innerHTML = '<div id="user-button"></div>';
+				Clerk.mountUserButton(document.getElementById('user-button'));
+			}
+		});
 	</script>
-	<script
-	src="https://www.chatbase.co/embed.min.js"
-	chatbotId="XuRClblpcZnzcX9uEP6HE"
-	domain="www.chatbase.co"
-	defer>
-</script>
+
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbx8SZDBQ9l4W1ZYctQkVWhBgiNxcLTtkO7uK_0LedqtLcVZmbzahJWE-xa4zb-npMq65g/exec'
+		const form = document.forms['submit-to-google-sheet']
+		const msg = document.getElementById('msg')
+
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+				.then(response => {
+					msg.innerHTML = "Thank you for Contact us!"
+					setTimeout(function () {
+						msg.innerHTML = ""
+					}, 5000)
+					form.reset()
+				})
+				.catch(error => console.error('Error!', error.message))
+		})
+	</script>
+
+	<!--CHATBOT SCRIPT-->
+	<script>
+		window.embeddedChatbotConfig = {
+			chatbotId: "XuRClblpcZnzcX9uEP6HE",
+			domain: "www.chatbase.co"
+		}
+	</script>
+	<script src="https://www.chatbase.co/embed.min.js" chatbotId="XuRClblpcZnzcX9uEP6HE" domain="www.chatbase.co" defer>
+	</script>
 
 </body>
+
 </html>

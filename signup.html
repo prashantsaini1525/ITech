@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login - iTech World</title>
+  <title>Sign Up - iTech World</title>
   <link rel="stylesheet" href="./login.css" />
 </head>
 <body>
   <div class="auth-container">
-    <!-- <h2>Login to iTech World</h2> -->
-    <!-- Container where the Clerk sign-in widget will mount -->
-    <div id="sign-in-container"></div>
+    <!-- <h2>Sign Up for iTech World</h2> -->
+    <!-- Container where the Clerk sign-up widget will mount -->
+    <div id="sign-up-container"></div>
   </div>
 
   <!-- Include Clerk's JS SDK -->
@@ -22,10 +22,10 @@
   <script>
     window.addEventListener('load', async function () {
       await Clerk.load();
-      // Mount the sign-in widget with custom routing options:
-      Clerk.mountSignIn(document.getElementById('sign-in-container'), {
-        afterSignInUrl: 'index.html',
-        signUpUrl: '/signup.html'  // Directly pass your custom sign-up page URL
+      // Mount the sign-up widget with custom routing options:
+      Clerk.mountSignUp(document.getElementById('sign-up-container'), {
+        afterSignUpUrl: 'index.html',
+        signInUrl: '/login.html'  // Directly pass your custom login page URL
       });
     });
   </script>
