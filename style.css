@@ -27,7 +27,6 @@ header {
 }
 
 /* Base navigation styling */
-/* Base navigation styling */
 nav {
 	padding: 20px;
 	position: fixed;
@@ -1300,12 +1299,14 @@ footer .btn:hover {
 }
 
 @media only screen and (max-width: 600px) {
+
 	/* Existing rules for navigation, auth, etc. */
 	nav {
 		display: flex;
 		align-items: center;
 	}
 
+	/* Move menu icon to the left */
 	.menu {
 		order: -1;
 		margin-right: 10px;
@@ -1313,21 +1314,27 @@ footer .btn:hover {
 		font-size: 25px;
 	}
 
+	/* Adjust logo position */
 	#logo {
 		order: 0;
 		margin-left: 10px;
 	}
 
+	/* Align auth container to the right without centering it */
 	#auth-container {
 		flex-direction: row;
 		justify-content: flex-end;
 		align-items: center;
 		gap: 10px;
-		padding: 0 20px;
-		margin: 10px auto;
+		margin-left: auto;
+		/* push auth container to right */
+		margin-right: 0;
+		/* remove any auto centering */
+		padding-right: 10px;
+		/* adjust right padding as needed */
 	}
 
-	/* Adjust the sign in button to be auto width */
+	/* Auth button remains auto width */
 	.auth-btn {
 		width: auto;
 		margin-left: 10px;
@@ -1336,6 +1343,7 @@ footer .btn:hover {
 		box-sizing: border-box;
 	}
 
+	/* Close button adjustments */
 	.close {
 		display: block;
 		text-align: right;
@@ -1389,6 +1397,7 @@ footer .btn:hover {
 }
 
 @media screen and (max-width: 1000px) {
+
 	.feedbox form input,
 	.feedbox form .fname {
 		width: 100%;
