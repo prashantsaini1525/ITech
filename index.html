@@ -44,11 +44,11 @@
 			</ul>
 			<!-- Auth container to display Login/Sign Up or User Icon -->
 			<div id="auth-container">
-				<a href="./signin.html" class="auth-btn">Sign In</a>
-				<a href="./signup.html" class="auth-btn">Sign Up</a>
+				<a href="./signin.html" class="auth-btn sign-in">Sign In</a>
+				<a href="./signup.html" class="auth-btn sign-up">Sign Up</a>
 			</div>
 			<div id="user-container"></div>
-			<img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu">
+			<i class="fa-solid fa-bars menu" onclick="sideMenu(0)"></i>
 		</nav>
 
 
@@ -69,7 +69,10 @@
 			</div>
 		</div>
 		<div class="side-menu" id="side-menu">
-			<div class="close" onclick="sideMenu(1)"><img src="images/icon/close.png" alt=""></div>
+			<div class="close" onclick="sideMenu(1)">
+				<i class="fa-solid fa-xmark"></i>
+			</div>
+
 			<div class="user">
 				<img src="images/creator/Prashant Saini.jpeg" alt="Username">
 				<p>prashant.saini.3150@gmail.com</p>
@@ -411,33 +414,47 @@
 	</div>
 
 	<!-- CONTACT US -->
-	<div class="diffSection" id="contactus_section">
-		<center>
-			<p style="font-size: 50px; padding: 100px">Contact Us</p>
-		</center>
+	<section class="diffSection" id="contactus_section">
+		<h2 style="font-size:50px; padding: 100px; text-align:center;">Contact Us</h2>
 		<div class="csec"></div>
 		<div class="back-contact">
 			<div class="cc">
 				<form name="submit-to-google-sheet">
-					<label>First Name <span class="imp">*</span></label><label style="margin-left: 185px">Last Name
-						<span class="imp">*</span></label><br>
-					<center>
-						<input type="text" name="fname" style="margin-right: 10px; width: 175px"
-							required="required"><input type="text" name="lname" style="width: 175px"
-							required="required"><br>
-					</center>
-					<label>Email <span class="imp">*</span></label><br>
-					<input type="email" name="email" style="width: 100%" required="required"><br>
-					<label>Phone No. <span class="imp">*</span></label><br>
-					<input type="text" name="phone" style="width: 100%" required="required"><br>
-					<label>Message <span class="imp">*</span></label><br>
-					<textarea name="message" required="required"></textarea><br>
+					<div class="form-row">
+						<div class="form-group">
+							<label>First Name <span class="imp">*</span></label>
+							<input type="text" name="fname" required>
+						</div>
+						<div class="form-group">
+							<label>Last Name <span class="imp">*</span></label>
+							<input type="text" name="lname" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label>Email <span class="imp">*</span></label>
+							<input type="email" name="email" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group">
+							<label>Phone No. <span class="imp">*</span></label>
+							<input type="text" name="phone" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group full">
+							<label>Message <span class="imp">*</span></label>
+							<textarea name="message" required></textarea>
+						</div>
+					</div>
 					<button type="submit" id="csubmit">Send Message</button>
 				</form>
 				<span id="msg"></span>
 			</div>
 		</div>
-	</div>
+	</section>
+
 
 
 

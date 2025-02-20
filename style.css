@@ -106,14 +106,6 @@ nav ul li a.active {
 	margin-left: 15px;
 }
 
-/* Styling for the menu icon */
-.menu {
-	width: 30px;
-	height: auto;
-	cursor: pointer;
-	margin-left: 20px;
-}
-
 /* Nav link and button defaults (without floats) */
 nav a,
 nav button {
@@ -193,10 +185,6 @@ button {
 	cursor: pointer;
 }
 
-/*.play img:hover {
-	color: #2e2e2e;
-	background: #DF2771;
-}*/
 .svg-image img {
 	width: 500px;
 	filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
@@ -204,9 +192,10 @@ button {
 
 /* SIDE MENU */
 .menu {
-	cursor: pointer;
+	display: none !important;
 	width: 25px;
-	display: none;
+	cursor: pointer;
+	margin-left: 20px;
 }
 
 .side-menu {
@@ -252,11 +241,22 @@ button {
 	padding: 15px 0px;
 }
 
-.close img {
-	float: right;
-	width: 35px;
+.close {
 	cursor: pointer;
-	margin: 10px;
+	/* Adjust padding/margin if needed */
+}
+
+.close i {
+	font-size: 30px;
+	/* Adjust size as needed */
+	color: #fff;
+	/* Change color to suit your design */
+	transition: transform 0.3s ease;
+}
+
+.close i:hover {
+	transform: scale(1.2);
+	/* Add a slight scale effect on hover */
 }
 
 .user {
@@ -466,7 +466,9 @@ button {
 }
 
 /* Center headings in founder and team sections */
-#founder_section, #team-section,  h1 {
+#founder_section,
+#team-section,
+h1 {
 	text-align: center;
 	width: 100%;
 }
@@ -778,7 +780,6 @@ button {
 }
 
 /*Service Section*/
-/*Service Section*/
 .service-swipe {
 	display: flex;
 	flex-wrap: wrap;
@@ -824,7 +825,7 @@ button {
 	transform: translateY(-10px);
 }
 
-/*Contact Us Section*/
+/* Background skew for contact section */
 .csec {
 	background: linear-gradient(to right, #425973, #DF2771);
 	background-attachment: fixed;
@@ -832,88 +833,101 @@ button {
 	width: 100%;
 	height: 250px;
 	top: 200px;
-	content: '';
 	transform-origin: top right;
 	transform: skewY(-10deg);
 	z-index: -1;
 }
 
+/* Centering the form container */
 .back-contact {
-	margin-top: 0px;
 	transform: translateY(-50px);
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	margin-bottom: 50px;
 }
 
+/* Form container styling */
 .cc {
 	width: 400px;
-	height: 430px;
+	max-width: 90%;
+	height: auto;
 	border-radius: 10px;
-	justify-content: center;
 	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
 	background: #fff;
+	padding: 20px;
 }
 
+/* Form element styling */
 .cc form {
-	margin: 5%;
-	margin-top: 40px;
-	width: 90%;
-	height: 90%;
-}
-
-.cc form label {
-	position: absolute;
-	color: #2E3D49;
-	font-size: 10px;
-	font-weight: 800;
-}
-
-.cc form input {
-	padding: 15px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-	box-shadow: inset 0 0 5px lightgray;
-	border: 1px solid rgba(0, 0, 0, 0.2);
-	outline: none;
-	color: #2E3D49;
-	font-weight: 600;
-}
-
-.imp {
-	color: red;
-}
-
-form textarea {
 	width: 100%;
-	height: 70px;
+}
+
+/* Remove absolute positioning from labels, display as blocks */
+.cc form label {
+	display: block;
+	color: #2E3D49;
+	font-size: 12px;
+	font-weight: 800;
+	margin-bottom: 5px;
+}
+
+/* Layout form rows */
+.form-row {
+	margin-bottom: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.form-group {
+	flex: 1;
+	min-width: 150px;
+}
+
+/* Full width group (for textarea) */
+.form-group.full {
+	flex: 100%;
+}
+
+/* Input and textarea styling */
+.cc form input,
+.cc form textarea {
+	width: 100%;
+	padding: 15px;
+	border-radius: 5px;
 	box-shadow: inset 0 0 5px lightgray;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
 	outline: none;
 	color: #2E3D49;
 	font-weight: 600;
-	padding: 15px;
+	margin-bottom: 10px;
 }
 
+/* Button styling */
 #csubmit {
 	margin-top: 5px;
 	background: linear-gradient(to right, #425973, #DF2771);
+	border: none;
 	border-radius: 5px;
-	border-style: none;
-	outline: none;
 	width: 100%;
 	padding: 15px 25px;
 	color: #fff;
 	font-size: 12px;
 	cursor: pointer;
+	transition: background 0.3s, color 0.3s;
 }
 
 #csubmit:hover {
-	color: #2e2e2e;
 	background: #DF2771;
+	color: #2e2e2e;
 }
+
+/* Imp text for required fields */
+.imp {
+	color: red;
+}
+
 
 /*REVIEW SECTION*/
 #makeitfull {
@@ -1238,12 +1252,12 @@ footer .btn:hover {
 
 	nav ul,
 	.srch,
-	.get-started {
+	.sign-up {
 		display: none;
 	}
 
-	.menu {
-		display: block;
+	nav .menu {
+		display: block !important;
 	}
 
 	nav {
@@ -1285,8 +1299,96 @@ footer .btn:hover {
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
+	/* Existing rules for navigation, auth, etc. */
+	nav {
+		display: flex;
+		align-items: center;
+	}
 
+	.menu {
+		order: -1;
+		margin-right: 10px;
+		display: block;
+		font-size: 25px;
+	}
+
+	#logo {
+		order: 0;
+		margin-left: 10px;
+	}
+
+	#auth-container {
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 10px;
+		padding: 0 20px;
+		margin: 10px auto;
+	}
+
+	/* Adjust the sign in button to be auto width */
+	.auth-btn {
+		width: auto;
+		margin-left: 10px;
+		padding: 12px 20px;
+		font-size: 18px;
+		box-sizing: border-box;
+	}
+
+	.close {
+		display: block;
+		text-align: right;
+		margin: 10px;
+		float: none;
+	}
+
+	.close i {
+		font-size: 30px;
+	}
+
+	/* Responsive adjustments for the Contact Form */
+	.back-contact {
+		flex-direction: column;
+		padding: 0 10px;
+		justify-content: center;
+	}
+
+	.cc {
+		width: 90%;
+		height: auto;
+		padding: 15px;
+		margin: 20px auto;
+	}
+
+	.cc form .form-row {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.cc form .form-group {
+		width: 100%;
+	}
+
+	.cc form label {
+		display: block;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	.cc form input,
+	.cc form textarea {
+		padding: 12px;
+		font-size: 14px;
+	}
+
+	#csubmit {
+		padding: 15px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
 	.feedbox form input,
 	.feedbox form .fname {
 		width: 100%;
