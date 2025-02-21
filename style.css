@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -13,8 +13,8 @@ html {
 }
 
 body {
-	background: #FFF;
-	font-family: 'Open Sans', sans-serif;
+	background: #fff;
+	font-family: "Open Sans", sans-serif;
 }
 
 header {
@@ -40,7 +40,6 @@ nav {
 	transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 /* Logo container */
 #logo {
 	flex: 0 0 auto;
@@ -51,6 +50,7 @@ nav ul {
 	display: flex;
 	align-items: center;
 	margin-left: 50px;
+	flex-grow: 1;
 }
 
 nav ul li {
@@ -72,15 +72,17 @@ nav ul li a.active {
 	background: #405570;
 }
 
-/* Auth container: pushed to the right */
+/* Auth container */
 #auth-container {
-	margin-left: auto;
 	display: flex;
 	align-items: center;
-	gap: 10px;
 }
 
-/* Styling for Login and Sign Up buttons */
+#auth-container .auth-btn:not(:last-child) {
+	margin-right: 10px;
+}
+
+/* Login/Sign Up button styling */
 .auth-btn {
 	background-color: transparent;
 	border: 1px solid #405570;
@@ -103,20 +105,24 @@ nav ul li a.active {
 	margin-left: 0 !important;
 }
 
-/* Container for the user icon (Clerk's User Button) */
+/* User container */
 #user-container {
 	display: flex;
 	align-items: center;
 	margin-left: 15px;
 }
 
-/* Nav link and button defaults (without floats) */
+#user-container .user-name {
+	display: inline-block;
+}
+
+/* Default nav links & button styling */
 nav a,
 nav button {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
 	font-size: 15px;
-	color: #2E3D49;
+	color: #2e3d49;
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
@@ -125,11 +131,12 @@ nav button {
 /* Logo link styling */
 #logo a {
 	font-size: 18px;
-	color: #2E3D49;
+	color: #2e3d49;
 	text-decoration: none;
 	letter-spacing: 1px;
 	font-weight: 700;
 }
+
 
 /*same styling for all buttons in this website */
 a,
@@ -138,7 +145,7 @@ button {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
 	font-size: 15px;
-	color: #2E3D49;
+	color: #2e3d49;
 	display: block;
 	text-decoration: none;
 	text-align: center;
@@ -216,7 +223,6 @@ button {
 	overflow: hidden;
 }
 
-
 .side-menu ul {
 	margin-top: 15%;
 	display: flex;
@@ -241,7 +247,7 @@ button {
 }
 
 .side-menu ul li a {
-	color: #FFF;
+	color: #fff;
 	width: 100%;
 	font-size: 1em;
 	/* background: #2E3D49; */
@@ -299,8 +305,8 @@ button {
 #team_section,
 #services_section,
 #contactus_section {
-	font-family: 'Open Sans', sans-serif;
-	color: #2E3D49;
+	font-family: "Open Sans", sans-serif;
+	color: #2e3d49;
 	position: relative;
 }
 
@@ -329,7 +335,8 @@ button {
 	font-size: 50px;
 	text-align: center;
 	color: #fff;
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("images/extra/b1.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+		url("images/extra/b1.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: cursive;
@@ -346,8 +353,7 @@ button {
 .smbox span {
 	margin: 1%;
 	background: #fff;
-	box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.2),
-		0 0 40px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.3);
 	border-radius: 10px;
 	padding: 30px 50px;
 	cursor: pointer;
@@ -355,7 +361,7 @@ button {
 
 .smbox span:hover {
 	transform: scale(1.3);
-	transition: .5s ease;
+	transition: 0.5s ease;
 }
 
 .smbox .data {
@@ -372,10 +378,10 @@ button {
 /*Title*/
 .title {
 	margin-top: 0px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 30px;
 	text-align: center;
-	color: #2E3D49;
+	color: #2e3d49;
 }
 
 /*ABOUT*/
@@ -422,7 +428,7 @@ button {
 .sideImage {
 	transform: translateX(100px);
 	opacity: 0;
-	transition: .8s ease-in-out;
+	transition: 0.8s ease-in-out;
 }
 
 .sideImage-appear {
@@ -460,7 +466,7 @@ button {
 }
 
 .cbox .det a:hover {
-	background: linear-gradient(to right, #405570, #DF2771);
+	background: linear-gradient(to right, #405570, #df2771);
 	color: white;
 }
 
@@ -501,8 +507,7 @@ h1 {
 	width: 300px;
 	border-radius: 10px;
 	background: #fff;
-	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4),
-		0 0 10px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.3);
 	text-align: center;
 	/* Center text in the card */
 }
@@ -532,7 +537,7 @@ h1 {
 ===================================== */
 .card-title {
 	font-size: 17px;
-	color: #343A40;
+	color: #343a40;
 	padding: 20px;
 	font-weight: 700;
 }
@@ -626,7 +631,6 @@ h1 {
 		1px 1px 30px rgba(255, 0, 242, 0.863);
 }
 
-
 /*FOUNDER SECTION*/
 .foundercard {
 	width: 100%;
@@ -651,7 +655,7 @@ h1 {
 	margin-top: 5px;
 	cursor: pointer;
 	border-radius: 50px;
-	transition-duration: .8s;
+	transition-duration: 0.8s;
 }
 
 .foundercard .card img:hover {
@@ -667,7 +671,7 @@ h1 {
 
 .card-title {
 	font-size: 17px;
-	color: #343A40;
+	color: #343a40;
 	padding: 20px;
 	font-weight: 700;
 }
@@ -690,8 +694,7 @@ h1 {
 }
 
 .totalcard .card {
-	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4),
-		0 0 10px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .card:nth-child(1) {
@@ -727,7 +730,7 @@ h1 {
 	margin-top: 5px;
 	cursor: pointer;
 	border-radius: 50px;
-	transition-duration: .8s;
+	transition-duration: 0.8s;
 }
 
 .totalcard .card img:hover {
@@ -753,7 +756,7 @@ h1 {
 	border: 1px solid black;
 	padding: 9px 25px;
 	cursor: pointer;
-	transition-duration: .4s;
+	transition-duration: 0.4s;
 }
 
 #detail a {
@@ -782,7 +785,7 @@ h1 {
 
 .card-title {
 	font-size: 17px;
-	color: #343A40;
+	color: #343a40;
 	padding: 20px;
 	font-weight: 700;
 }
@@ -793,7 +796,8 @@ h1 {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("images/extra/b3.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+		url("images/extra/b3.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -819,13 +823,13 @@ h1 {
 		0 0 50px rgba(0, 0, 0, 0.8);
 	border-radius: 5px;
 	cursor: pointer;
-	transition-duration: .5s;
+	transition-duration: 0.5s;
 }
 
 .service-swipe .s-card p {
 	color: #f2f2f2;
 	font-size: 1.2em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 .service-swipe .s-card:hover {
@@ -835,7 +839,7 @@ h1 {
 
 /* Background skew for contact section */
 .csec {
-	background: linear-gradient(to right, #425973, #DF2771);
+	background: linear-gradient(to right, #425973, #df2771);
 	background-attachment: fixed;
 	position: absolute;
 	width: 100%;
@@ -874,7 +878,7 @@ h1 {
 /* Remove absolute positioning from labels, display as blocks */
 .cc form label {
 	display: block;
-	color: #2E3D49;
+	color: #2e3d49;
 	font-size: 12px;
 	font-weight: 800;
 	margin-bottom: 5px;
@@ -907,7 +911,7 @@ h1 {
 	box-shadow: inset 0 0 5px lightgray;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	outline: none;
-	color: #2E3D49;
+	color: #2e3d49;
 	font-weight: 600;
 	margin-bottom: 10px;
 }
@@ -915,7 +919,7 @@ h1 {
 /* Button styling */
 #csubmit {
 	margin-top: 5px;
-	background: linear-gradient(to right, #425973, #DF2771);
+	background: linear-gradient(to right, #425973, #df2771);
 	border: none;
 	border-radius: 5px;
 	width: 100%;
@@ -927,7 +931,7 @@ h1 {
 }
 
 #csubmit:hover {
-	background: #DF2771;
+	background: #df2771;
 	color: #2e2e2e;
 }
 
@@ -935,7 +939,6 @@ h1 {
 .imp {
 	color: red;
 }
-
 
 /*REVIEW SECTION*/
 #makeitfull {
@@ -949,7 +952,7 @@ h1 {
 }
 
 .review {
-	background: #F8F8F8;
+	background: #f8f8f8;
 	width: 100%;
 }
 
@@ -985,7 +988,7 @@ h1 {
 .identity img {
 	width: 120px;
 	height: 120px;
-	transition-duration: .8s;
+	transition-duration: 0.8s;
 	border-radius: 50%;
 }
 
@@ -998,7 +1001,7 @@ h1 {
 .identity p {
 	width: 150px;
 	font-weight: bold;
-	color: #2E3D49;
+	color: #2e3d49;
 	text-align: center;
 }
 
@@ -1019,14 +1022,14 @@ h1 {
 
 .rev-cont #title {
 	padding: 10px;
-	color: #2E3D49;
+	color: #2e3d49;
 	font-weight: bold;
 }
 
 .rev-cont #content {
 	padding: 10px;
-	font-size: .9em;
-	color: #2E3D49;
+	font-size: 0.9em;
+	color: #2e3d49;
 	line-height: 22px;
 	text-align: justify;
 }
@@ -1040,16 +1043,16 @@ h1 {
 
 .title2 span {
 	font-weight: 700;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 30px;
-	color: #2E3D49;
+	color: #2e3d49;
 }
 
 .title2 .shortdesc2 {
 	padding: 10px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 15px;
-	color: #2E3D49;
+	color: #2e3d49;
 	margin-bottom: 10px;
 }
 
@@ -1057,7 +1060,8 @@ h1 {
 	margin-top: 50px;
 	width: 100%;
 	display: flex;
-	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("images/extra/b4.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+		url("images/extra/b4.jpg");
 	background-size: cover;
 	padding: 50px 80px;
 	background-attachment: fixed;
@@ -1069,8 +1073,7 @@ h1 {
 	position: relative;
 	border-radius: 10px;
 	justify-content: center;
-	box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.6),
-		0 0 80px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.6), 0 0 80px rgba(0, 0, 0, 0.2);
 	background: rgba(0, 0, 0, 0.4);
 }
 
@@ -1094,7 +1097,7 @@ h1 {
 	box-shadow: inset 0 0 5px lightgray;
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	outline: none;
-	color: #2E3D49;
+	color: #2e3d49;
 	background: #fff9;
 	font-weight: 600;
 }
@@ -1115,7 +1118,7 @@ h1 {
 
 .feed #csubmit {
 	margin-top: 25px;
-	background: linear-gradient(to right, #425973, #DF2771);
+	background: linear-gradient(to right, #425973, #df2771);
 	border-radius: 5px;
 	border-style: none;
 	outline: none;
@@ -1128,7 +1131,7 @@ h1 {
 
 #csubmit:hover {
 	color: #2e2e2e;
-	background: #DF2771;
+	background: #df2771;
 }
 
 /*SCROLLING TEXT*/
@@ -1142,8 +1145,8 @@ h1 {
 
 /*FOOTER*/
 footer {
-	color: #E5E8EF;
-	background: #000D;
+	color: #e5e8ef;
+	background: #000d;
 	padding: 50px 0;
 }
 
@@ -1167,12 +1170,12 @@ footer .social-media a {
 
 .social-media a:hover {
 	transform: translateY(-5px);
-	color: #316FF6;
+	color: #316ff6;
 }
 
 footer .left-col p {
 	font-size: 16px;
-	color: #A6B2C4;
+	color: #a6b2c4;
 }
 
 footer .right-col h1 {
@@ -1182,7 +1185,7 @@ footer .right-col h1 {
 footer .border {
 	width: 100px;
 	height: 4px;
-	background: linear-gradient(to right, #425973, #DF2771);
+	background: linear-gradient(to right, #425973, #df2771);
 	margin: 2px;
 }
 
@@ -1201,7 +1204,7 @@ footer .email {
 	flex: 1;
 	padding: 18px 40px;
 	font-size: 16px;
-	background: #343A40;
+	background: #343a40;
 	border: none;
 	font-weight: 700;
 	outline: none;
@@ -1216,24 +1219,24 @@ footer .btn {
 	padding: 18px 40px;
 	font-size: 16px;
 	color: #f1f1f1;
-	background: linear-gradient(to right, #425973, #DF2771);
+	background: linear-gradient(to right, #425973, #df2771);
 	border: none;
 	font-weight: 700;
 	outline: none;
 	border-radius: 5px;
 	margin-left: 20px;
 	cursor: pointer;
-	transition: opacity .3s linear;
+	transition: opacity 0.3s linear;
 }
 
 footer .btn:hover {
-	opacity: .7;
+	opacity: 0.7;
 }
 
-/*PROPERTIES FOR MAKING WEBSITE RESPONSIVE*/
+/* Responsive styles */
 
+/* Up to 960px */
 @media only screen and (max-width: 960px) {
-
 	.footer-container {
 		max-width: 600px;
 	}
@@ -1258,6 +1261,7 @@ footer .btn:hover {
 		margin-left: 30%;
 	}
 
+	/* Hide navigation items and search */
 	nav ul,
 	.srch,
 	.sign-up {
@@ -1289,11 +1293,20 @@ footer .btn:hover {
 	}
 
 	.title {
-		margin-top: 0px;
+		margin-top: 0;
 	}
-
 }
 
+/* Up to 1000px */
+@media screen and (max-width: 1000px) {
+
+	.feedbox form input,
+	.feedbox form .fname {
+		width: 100%;
+	}
+}
+
+/* Up to 700px */
 @media screen and (max-width: 700px) {
 	footer .btn {
 		margin: 0;
@@ -1307,15 +1320,10 @@ footer .btn:hover {
 	}
 }
 
+/* Up to 600px */
 @media only screen and (max-width: 600px) {
 
-	/* Existing rules for navigation, auth, etc. */
-	nav {
-		display: flex;
-		align-items: center;
-	}
-
-	/* Move menu icon to the left */
+	/* Navigation adjustments */
 	.menu {
 		order: -1;
 		margin-right: 10px;
@@ -1323,27 +1331,38 @@ footer .btn:hover {
 		font-size: 25px;
 	}
 
-	/* Adjust logo position */
 	#logo {
 		order: 0;
 		margin-left: 10px;
 	}
 
-	.sign-up {
-		display: none !important;
-		/* Only show Sign In */
-	}
-
-	/* Optionally adjust the auth container to keep Sign In on the right */
+	/* Note: .sign-up remains hidden from the 960px rule */
 	#auth-container {
+		order: 2;
 		margin-left: auto;
-		/* pushes container to the right */
 		margin-right: 10px;
 		padding-right: 10px;
-		/* adjust if needed */
 	}
 
-	/* Optional: tweak Sign In button styling for smaller screens */
+	/* For logged-in state, show the user container */
+	#user-container {
+		order: 2;
+		margin-left: auto;
+		/* pushes it to the far right */
+		margin-right: 10px;
+		width: 35px;
+		height: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	/* Hide sign-up button (if needed) */
+	.sign-up {
+		display: none !important;
+	}
+
+	/* Adjust Sign In button styling */
 	.sign-in {
 		margin-left: 10px;
 		padding: 12px 20px;
@@ -1362,7 +1381,7 @@ footer .btn:hover {
 		font-size: 30px;
 	}
 
-	/* Responsive adjustments for the Contact Form */
+	/* Contact Form adjustments */
 	.back-contact {
 		flex-direction: column;
 		padding: 0 10px;
@@ -1403,14 +1422,7 @@ footer .btn:hover {
 	}
 }
 
-@media screen and (max-width: 1000px) {
-
-	.feedbox form input,
-	.feedbox form .fname {
-		width: 100%;
-	}
-}
-
+/* Global message styling */
 #msg {
 	color: #61b752;
 	margin-top: 20px;

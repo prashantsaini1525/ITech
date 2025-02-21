@@ -11,6 +11,9 @@
 	<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
 	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script src="https://cdn.jsdelivr.net/npm/@clerk/clerk-js@latest/dist/clerk.browser.js"
+		data-clerk-publishable-key="pk_test_ZmluZXItdHJvdXQtMjAuY2xlcmsuYWNjb3VudHMuZGV2JA">
+		</script>
 	<script type="text/javascript" src="./script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="https://kit.fontawesome.com/e4acf8f52e.js" crossorigin="anonymous"></script>
@@ -523,22 +526,52 @@
 		</div>
 	</footer>
 
-	<!-- Include Clerk's JS SDK -->
 	<script>
-		window.addEventListener('load', async function () {
-			await Clerk.load();
+		document.addEventListener("DOMContentLoaded", async function () {
+			if (!window.Clerk) {
+				console.error("Clerk is not loaded! Make sure the script is included above this script.");
+				return;
+			}
+
+			try {
+				await Clerk.load();
+			} catch (err) {
+				console.error("Error loading Clerk:", err);
+				return;
+			}
+
 			const authContainer = document.getElementById('auth-container');
 			const userContainer = document.getElementById('user-container');
+			const nav = document.querySelector('nav');
 
-			// If the user is logged in, display the user icon
-			if (Clerk.user) {
-				// Clear the login/signup links
-				authContainer.style.display = 'none';
-				userContainer.innerHTML = '<div id="user-button"></div>';
-				Clerk.mountUserButton(document.getElementById('user-button'));
+			async function updateUI(event) {
+				const user = await Clerk.user;
+				console.log("User status:", user, event);
+
+				if (user) {
+					// User is logged in: hide auth container and mount user button
+					authContainer.style.display = 'none';
+					userContainer.innerHTML = '<div id="user-button"></div>';
+					Clerk.mountUserButton(document.getElementById('user-button'));
+				} else {
+					// User is logged out: show auth container and clear user container
+					authContainer.style.display = 'flex';
+					userContainer.innerHTML = '';
+				}
+				// Reveal the navbar once the UI is set
+				nav.classList.add('visible');
 			}
+
+			// Initial UI update and reveal the navbar afterward
+			await updateUI();
+
+			// Listen for auth state changes
+			Clerk.on("authStateChange", updateUI);
 		});
 	</script>
+
+
+
 
 	<script>
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbx8SZDBQ9l4W1ZYctQkVWhBgiNxcLTtkO7uK_0LedqtLcVZmbzahJWE-xa4zb-npMq65g/exec'
