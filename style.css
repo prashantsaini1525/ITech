@@ -1237,194 +1237,179 @@ footer .btn:hover {
 
 /* Up to 960px */
 @media only screen and (max-width: 960px) {
-	.footer-container {
-		max-width: 600px;
-	}
-
-	.right-col {
-		width: 100%;
-		margin-bottom: 60px;
-	}
-
-	.left-col {
-		width: 100%;
-		text-align: center;
-	}
-
-	.social-media {
-		display: flex;
-		justify-content: center;
-	}
-
-	.logo {
-		transition: 1s;
-		margin-left: 30%;
-	}
-
-	/* Hide navigation items and search */
-	nav ul,
-	.srch,
-	.sign-up {
-		display: none;
-	}
-
-	nav .menu {
-		display: block !important;
-	}
-
-	nav {
-		padding-bottom: 20px;
-		border-bottom: 1px solid #0005;
-	}
-
-	.quote p,
-	.quote h5,
-	.play {
-		justify-content: center;
-		text-align: center;
-	}
-
-	.quote p {
-		font-size: 30px;
-	}
-
-	.service-container .right-side img {
-		width: 90%;
-	}
-
-	.title {
-		margin-top: 0;
-	}
+  .footer-container {
+    max-width: 600px;
+  }
+  .right-col {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .left-col {
+    width: 100%;
+    text-align: center;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
+  .logo {
+    transition: 1s;
+    margin-left: 30%;
+  }
+  /* Hide navigation items and search */
+  nav ul,
+  .srch,
+  .sign-up {
+    display: none;
+  }
+  nav .menu {
+    display: block !important;
+  }
+  nav {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0005;
+  }
+  .quote p,
+  .quote h5,
+  .play {
+    justify-content: center;
+    text-align: center;
+  }
+  .quote p {
+    font-size: 30px;
+  }
+  .service-container .right-side img {
+    width: 90%;
+  }
+  .title {
+    margin-top: 0;
+  }
 }
 
 /* Up to 1000px */
 @media screen and (max-width: 1000px) {
-
-	.feedbox form input,
-	.feedbox form .fname {
-		width: 100%;
-	}
+  .feedbox form input,
+  .feedbox form .fname {
+    width: 100%;
+  }
 }
 
 /* Up to 700px */
 @media screen and (max-width: 700px) {
-	footer .btn {
-		margin: 0;
-		width: 100%;
-		margin-top: 20px;
-	}
-
-	.svg-image img {
-		width: 90%;
-		margin: 20px;
-	}
+  footer .btn {
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .svg-image img {
+    width: 90%;
+    margin: 20px;
+  }
 }
 
-/* Up to 600px */
 @media only screen and (max-width: 600px) {
-
-	/* Navigation adjustments */
+	/* Menu button on the far left */
 	.menu {
-		order: -1;
-		margin-right: 10px;
-		display: block;
-		font-size: 25px;
+	  order: -1;
+	  margin-right: 10px;
+	  display: block;
+	  font-size: 25px;
 	}
-
+  
+	/* Logo container: force it to stay in place and prevent shrinking */
 	#logo {
-		order: 0;
-		margin-left: 10px;
+	  order: 0;
+	  margin-left: 10px;
+	  flex-shrink: 0;
 	}
-
-	/* Note: .sign-up remains hidden from the 960px rule */
-	#auth-container {
-		order: 2;
-		margin-left: auto;
-		margin-right: 10px;
-		padding-right: 10px;
-	}
-
-	/* For logged-in state, show the user container */
+  
+	/* Right-side container for auth (Sign In) or user icon */
+	#auth-container,
 	#user-container {
-		order: 2;
-		margin-left: auto;
-		/* pushes it to the far right */
-		margin-right: 10px;
-		width: 35px;
-		height: 35px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+	  order: 1;
+	  margin-left: auto;
+	  margin-right: 10px;
+	  padding-right: 10px;
+	  display: flex;
+	  align-items: center;
 	}
-
-	/* Hide sign-up button (if needed) */
-	.sign-up {
-		display: none !important;
-	}
-
+  
 	/* Adjust Sign In button styling */
 	.sign-in {
-		margin-left: 10px;
-		padding: 12px 20px;
-		font-size: 18px;
+	  margin-left: 10px;
+	  padding: 12px 20px;
+	  font-size: 18px;
 	}
-
-	/* Close button adjustments */
+  
+	/* Hide the Sign Up button */
+	.sign-up {
+	  display: none !important;
+	}
+  
+	/* Additional adjustments for user container */
+	#user-container {
+	  margin-left: 5px;
+	}
+	#user-container,
+	#user-button {
+	  width: 35px;
+	  height: 35px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+	#user-container .user-name {
+	  display: none;
+	}
+  
+	/* Other responsive rules for close buttons, contact form, etc. remain unchanged */
 	.close {
-		display: block;
-		text-align: right;
-		margin: 10px;
-		float: none;
+	  display: block;
+	  text-align: right;
+	  margin: 10px;
+	  float: none;
 	}
-
 	.close i {
-		font-size: 30px;
+	  font-size: 30px;
 	}
-
-	/* Contact Form adjustments */
 	.back-contact {
-		flex-direction: column;
-		padding: 0 10px;
-		justify-content: center;
+	  flex-direction: column;
+	  padding: 0 10px;
+	  justify-content: center;
 	}
-
 	.cc {
-		width: 90%;
-		height: auto;
-		padding: 15px;
-		margin: 20px auto;
+	  width: 90%;
+	  height: auto;
+	  padding: 15px;
+	  margin: 20px auto;
 	}
-
 	.cc form .form-row {
-		flex-direction: column;
-		gap: 10px;
+	  flex-direction: column;
+	  gap: 10px;
 	}
-
 	.cc form .form-group {
-		width: 100%;
+	  width: 100%;
 	}
-
 	.cc form label {
-		display: block;
-		font-size: 12px;
-		margin-bottom: 5px;
+	  display: block;
+	  font-size: 12px;
+	  margin-bottom: 5px;
 	}
-
 	.cc form input,
 	.cc form textarea {
-		padding: 12px;
-		font-size: 14px;
+	  padding: 12px;
+	  font-size: 14px;
 	}
-
 	#csubmit {
-		padding: 15px;
-		font-size: 14px;
+	  padding: 15px;
+	  font-size: 14px;
 	}
-}
+  }
+  
 
 /* Global message styling */
 #msg {
-	color: #61b752;
-	margin-top: 20px;
-	display: block;
+  color: #61b752;
+  margin-top: 20px;
+  display: block;
 }
