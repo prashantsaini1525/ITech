@@ -40,17 +40,18 @@
 				<li><a href="#" class="active">Home</a></li>
 				<li><a href="#courses_section">Courses</a></li>
 				<li><a href="#about_section">About</a></li>
-				<li><a href="#portfolio_section">Portfolio</a></li>
+				<!-- <li><a href="#portfolio_section">Portfolio</a></li> -->
 				<li><a href="#founder_section">Founder</a></li>
 				<li><a href="#services_section">Services</a></li>
 				<li><a href="#contactus_section">Contact</a></li>
 			</ul>
-			<!-- Auth container to display Login/Sign Up or User Icon -->
-			<div id="auth-container">
-				<a href="./signin.html" class="auth-btn sign-in">Sign In</a>
-				<a href="./signup.html" class="auth-btn sign-up">Sign Up</a>
+			<div class="srch">
+				<input type="text" class="search" id="searchInput" placeholder="Search here...">
+				<img src="images/icon/search.png" alt="search" onclick=searchCourses()>
 			</div>
-			<div id="user-container"></div>
+			<div id="searchResults"></div>
+			</div>
+			<a class="get-started" href="login.html" target="_blank">Get Started</a>
 			<i class="fa-solid fa-bars menu" onclick="sideMenu(0)"></i>
 		</nav>
 
@@ -507,7 +508,7 @@
 					<a href="#"><i class="fa-brands fa-linkedin"></i></a>
 					<a href="#"><i class="fa-brands fa-github"></i></a>
 				</div><br><br>
-				<p class="rights-text">Copyright © 2024 Created By I Tech World All Rights Reserved.</p>
+				<p class="rights-text">Copyright © 2025 Created By I Tech World All Rights Reserved.</p>
 				<br>
 				<p><i class="fa-solid fa-location-dot"></i> ACET<br>Aligarh, U.P.-202001</p><br>
 				<p><i class="fa-solid fa-phone"></i> +91-8650565472<br>
@@ -522,56 +523,10 @@
 					<input type="email" name="email" class="email" placeholder="Enter Your Email" required>
 					<input class="btn" type="submit" value="Submit">
 				</form>
+				<span id="msg"></span>
 			</div>
 		</div>
 	</footer>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", async function () {
-			if (!window.Clerk) {
-				console.error("Clerk is not loaded! Make sure the script is included above this script.");
-				return;
-			}
-
-			try {
-				await Clerk.load();
-			} catch (err) {
-				console.error("Error loading Clerk:", err);
-				return;
-			}
-
-			const authContainer = document.getElementById('auth-container');
-			const userContainer = document.getElementById('user-container');
-			const nav = document.querySelector('nav');
-
-			async function updateUI(event) {
-				const user = await Clerk.user;
-				console.log("User status:", user, event);
-
-				if (user) {
-					// User is logged in: hide auth container and mount user button
-					authContainer.style.display = 'none';
-					userContainer.innerHTML = '<div id="user-button"></div>';
-					Clerk.mountUserButton(document.getElementById('user-button'));
-				} else {
-					// User is logged out: show auth container and clear user container
-					authContainer.style.display = 'flex';
-					userContainer.innerHTML = '';
-				}
-				// Reveal the navbar once the UI is set
-				nav.classList.add('visible');
-			}
-
-			// Initial UI update and reveal the navbar afterward
-			await updateUI();
-
-			// Listen for auth state changes
-			Clerk.on("authStateChange", updateUI);
-		});
-	</script>
-
-
-
 
 	<script>
 		const scriptURL = 'https://script.google.com/macros/s/AKfycbx8SZDBQ9l4W1ZYctQkVWhBgiNxcLTtkO7uK_0LedqtLcVZmbzahJWE-xa4zb-npMq65g/exec'
